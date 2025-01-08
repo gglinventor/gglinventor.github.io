@@ -1,0 +1,287 @@
+/* cop - create order page */
+
+.cop-container {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.cop-cop-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.cop-cop-span {
+    color: #070707;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 7px 0;
+    line-height: 1.29rem;
+}
+
+.radio-container {
+    margin: 1rem;
+}
+
+.form-check-label {
+    color: black;
+}
+
+.form-check-input {
+    margin-top: 0.1rem;
+}
+
+.chose-shop-container {
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+}
+
+.radio-container,
+.chose-shop-container {
+    max-width: 100%;
+    margin-right: 0;
+}
+
+.card-pay-container,
+.create-order-item,
+.create-order-first-item  {
+    border-top: solid;
+    border-width: 1px;
+    border-color:rgba(0, 0, 0, 0.175);
+    padding-top: 1rem;
+}
+
+.card-pay-container {
+    padding: 0;
+    padding-top: 0.75rem;
+}
+
+.cop-title {
+    font-size: 18px;
+    color: black;
+}
+
+.chose-shop-select {
+    max-width: 23.5rem;
+}
+
+.delivery-container {
+    display: none;
+    margin: 1rem;
+    margin-top: 0;
+    max-width: 100%;
+}
+
+.chose-delivery {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.cop-mini-title {
+    font-size: 16px;
+    color: black;
+}
+
+.cop-textarea {
+    max-width: 85%;
+    max-height: 80px;
+}
+
+.cop-pay-container {
+    margin: 1rem;
+    margin-top: 0;
+}
+
+.card-pay-img {
+    width: 50px;
+    margin-inline: 0.75rem;
+}
+
+.promocod-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.promocod-img {
+    width: 25px;
+    margin-left: 0.5rem;
+}
+
+.bonus-radio {
+    margin-right: 0.75rem;
+}
+
+.radio-bonus-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+
+
+.col-mini-col-container {
+    display: none;
+}
+
+.col-col-container {
+    display: none;
+}
+
+.create-order-container {
+    border: solid;
+    border-width: 1px;
+    border-color:rgba(0, 0, 0, 0.175);
+    margin: 2rem;
+    padding-bottom: 1.25rem;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.pos-cart-sticky {
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 32px;
+}
+
+.create-order-text.create-order-your-cart {
+    margin: 1rem;
+}
+
+
+.create-order-container>div {
+    padding-inline: 1rem;
+}
+
+
+.create-order-item-item {
+    padding-top: 0.75rem;
+}
+
+.create-order-text {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.create-order-bold-text {
+    font-weight: 700;
+}
+
+.create-order-all-price {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.container-create-order {
+    margin-top: 1rem;
+}
+
+
+
+@media (max-width: 1300px) {
+    .create-order-container {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1199px) {
+    .col-col-container {
+        display: block;
+    }
+    
+    .delivery-town {
+        max-width: 85%;
+    }
+
+    .two-row {
+        margin-top: 1rem;
+    }
+
+    .radio-bonus-container {
+        justify-content: start;
+        margin-top: 1.5rem;
+    }
+
+    .create-order-container {
+        margin-inline: 3rem;
+    }
+
+    .promocod-input {
+        max-width: 40% !important;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .create-order-container {
+        margin-inline: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .create-order-container {
+        margin-inline: 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .plus-row {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .cop-col-item {
+        max-width: 90%;
+    }
+
+    .form-select {
+        font-size: 0.9rem;
+    }
+
+    .radio-container,
+    .chose-shop-container {
+        padding-right: 0;
+    }
+
+    .radio-bonus-container {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .col-mini-col-container {
+        display: block;
+    }
+
+    .main-create-order-container {
+        padding-inline: 0;    
+    }
+}
+
+@media (max-width: 400px) {
+    .form-select {
+        font-size: 0.8rem;
+    }
+
+    .form-check-inline {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .cop-cop-promocod-span {
+        padding-inline: 0.5rem;
+        line-height: 2rem;
+    }
+}

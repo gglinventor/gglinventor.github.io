@@ -1,0 +1,180 @@
+.entrance-congratulation {
+    background: linear-gradient(90deg, #ff4d00 0%, #ffaa00 100%);
+    animation: entrance-congratulation-animation 2s ease 0s 1 normal forwards;
+}
+
+.entrance-congratulation,
+.entrance-main-info,
+.entrance-new,
+.entrance-catalog {
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.entrance-congratulation-span,
+.entrance-new-span,
+.entrance-catalog-span {
+    font-size: 2rem;
+    color: white;
+    max-width: 100%;
+}
+
+.entrance-main-info,
+.entrance-new,
+.entrance-catalog {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.entrance-main-info {
+    background: linear-gradient(90deg, #4400ff 0%, #a000ff 100%);
+    animation: entrance-info-animation 2s ease 0s 1 normal forwards;
+}
+
+.entrance-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.entrance-info-span {
+    font-size: 20px;
+    color: white;
+    max-width: 100%;
+}
+
+.entrance-dop-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.entrance-dop-info-link {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.entrance-dop-info-link:hover {
+    text-decoration: underline;
+}
+
+.entrance-new {
+    background: linear-gradient(90deg, #7300ff 0%, #fb0aff 100%);
+    animation: entrance-new-animation 2s ease 0s 1 normal forwards;
+}
+
+.card-for-main {
+    animation: entrance-info-animation 2s ease 0s 1 normal forwards;
+}
+
+.entrance-catalog {
+    position: relative;
+    background: linear-gradient(90deg, #004cff 0%, #0afbff 100%);
+    animation: entrance-info-animation 2s ease 0s 1 normal forwards;
+}
+
+.entrance-catalog-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.entrance-catalog-link {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 1024px) {
+    .entrance-info-span {
+        padding-top: 0.75rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .entrance-congratulation {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .entrance-congratulation,
+    .entrance-main-info,
+    .entrance-new,
+    .entrance-catalog {
+        padding: 1rem;
+        margin-inline: 0.5rem;
+        padding-inline: 0.5rem;
+    }
+
+    .entrance-info-span {
+        font-size: 16px;
+    }
+
+    .entrance-congratulation-br {
+        display: block !important;
+    }
+    
+    .entrance-new-span,
+    .entrance-catalog-span {
+        font-size: 20px;
+    }
+
+    /* .entrance-info-img {
+        height: 80px;
+    } */
+}
+
+@media (max-width: 1650px) and (min-width: 395px) {
+    .entrance-info-br {
+        display: block !important;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .entrance-congratulation {
+        padding: 0.3rem;
+    }
+}
+
+@keyframes entrance-congratulation-animation {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes entrance-info-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes entrance-new-animation {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

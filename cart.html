@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/deps/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="static/deps/css/my-styles.css">
+    <link rel="stylesheet" href="static/deps/css/cart-styles.css">
+    <!-- Стиль footer-a для главной страницы -->
+    <link rel="stylesheet" href="static/deps/css/my-footer-styles.css">
+    <!-- Favicons for different platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/deps/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/deps/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/deps/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/deps/favicon/site.webmanifest">
+    <title>Вкусно и быстро | Корзина</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="static/deps/favicon/android-chrome-192x192.png"
+                        alt="pizza-logotip"></a>
+                <span class="logotip-span">Вкусно и быстро</span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="info.html">Информация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="cart.html">Корзина</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="login.html">Войти</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Мой профиль
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item  text-white" href="cart.html">Корзина</a></li>
+                                <li><a class="dropdown-item  text-white" href="#">Личный кабинет</a>
+                                </li>
+                                <li><a class="dropdown-item  text-white" href="#">Админ панель</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item  text-white" href="#">Выйти</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск товара" aria-label="Search">
+                        <button class="btn btn-outline-success text-white" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="div-main">
+        <section>
+            <div class="container-fluid pos-sticky">
+                <div class="row">
+                    <div class="col-xl-1 col-sm-1 col-0">
+                    </div>
+                    <div class="col-xl-9 col-sm-8 col-8">
+                        <div class="mt-2 z-3">
+                            <!-- Каталог -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-dark catalog-btn" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Каталог</span>
+                                    <!-- width="32" height="32" -->
+                                    <img class="mx-1" src="static/deps/icons/grid-fill.svg" alt="Catalog Icon">
+                                </button>
+                                <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Всетовары</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Пицца</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Комбо</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Напитки</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Закуски</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-2">
+                <div class="row">
+                    <!-- Если пустая корзина -->
+                    <!-- <div class="col-1">
+                    </div>
+                    <div class="col-10">
+                        <div class="cart-container mt-2">
+                            <div class="cart-cart-container">
+                                <span class="cart-cart">Корзина</span>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12 cart-one" style="margin-bottom: 0.5rem;">
+                                        <div class="not-cart-container">
+                                            <span style="color: black;">Тут ничего нет <span style="font-size: 20px;">😞</span></span>
+                                            <br>
+                                            <p class="not-cart-p"><a class="not-cart-link" href="base.html">Перейти в каталог</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-xxl-1 col-sm-0">
+                    </div>
+                    <div class="col-xxl-7 col-lg-8 col-sm-12">
+                        <div class="cart-container mt-2">
+                            <div class="cart-cart-container">
+                                <span class="cart-cart">Корзина</span>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12 cart-one">
+                                        <div class="row cart-items">
+                                            <div class="col-sm-2 col-5 text-center">
+                                                <a href="product.html"><img src="static/deps/images/goods/tabris-pizza.png" class="cart-img"></a>
+                                            </div>
+                                            <div class="col-sm-5 col-7 px-2">
+                                                <div style="margin-bottom: 0.7rem">
+                                                    <a href="product.html" style="text-decoration: none; color: black;">
+                                                        <p class="cart-product-name">Моцарелла</p>
+                                                        <span style="font-size: 14px;">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо. Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо.</span>
+                                                        <br>
+                                                        <div class="cart-price">
+                                                            <span class="cart-price-price">Цена: </span>
+                                                            <!-- <span style="font-size: 15px;">100.00 ₽</span> -->
+                                                            <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                            <span style="color: red; font-weight: 600;">99.99 ₽</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="cart-options">
+                                                    <a href="#" style="margin-right: 0.6rem;">
+                                                        <div class="cart-delete">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <a href="create-order.html" class="cart-link-buy">Купить</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-center mobile-cart-price">
+                                                <span style="color: black; font-size: 15px; margin-right: 0.2rem">Цена: </span>
+                                                <!-- Без скидки -->
+                                                <!-- <br class="mobile-cart-price-br">
+                                                <span style="font-size: 15px;">100.00 ₽</span> -->
+                                                <br class="mobile-cart-price-br">
+                                                <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                <br class="mobile-cart-price-br">
+                                                <span style="color: red; font-weight: 600;">99.99 ₽</span>
+                                            </div>
+                                            <div class="col-sm-3 col-4 text-center change-btns">
+                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M5 11a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"></path>
+                                                    </svg>
+                                                </button>
+                                                <input type="number" min="1" value="1" max="100" class="cart-input" readonly>
+                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M12 4a1 1 0 0 0-1 1v6H5a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V5a1 1 0 0 0-1-1"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="col-sm-2 col-4 text-center cart-total-price">
+                                                <strong><span class="total-price">1000.00 ₽</span></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 cart-one">
+                                        <div class="row cart-items">
+                                            <div class="col-sm-2 col-5 text-center">
+                                                <a href="product.html"><img src="static/deps/images/goods/Напиток.jpg" class="cart-img"></a>
+                                            </div>
+                                            <div class="col-sm-5 col-7 px-2">
+                                                <div style="margin-bottom: 0.7rem">
+                                                    <a href="product.html" style="text-decoration: none; color: black;">
+                                                        <p class="cart-product-name">Напиток</p>
+                                                        <span style="font-size: 14px;">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо. Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо.</span>
+                                                        <br>
+                                                        <div class="cart-price">
+                                                            <span class="cart-price-price">Цена: </span>
+                                                            <!-- <span style="font-size: 15px;">100.00 ₽</span> -->
+                                                            <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                            <span style="color: red; font-weight: 600;">99.99 ₽</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="cart-options">
+                                                    <a href="#" style="margin-right: 0.6rem;">
+                                                        <div class="cart-delete">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <a href="create-order.html" class="cart-link-buy">Купить</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-center mobile-cart-price">
+                                                <span style="color: black; font-size: 15px; margin-right: 0.2rem">Цена: </span>
+                                                <!-- Без скидки -->
+                                                <!-- <br class="mobile-cart-price-br">
+                                                <span style="font-size: 15px;">100.00 ₽</span> -->
+                                                <br class="mobile-cart-price-br">
+                                                <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                <br class="mobile-cart-price-br">
+                                                <span style="color: red; font-weight: 600;">99.99 ₽</span>
+                                            </div>
+                                            <div class="col-sm-3 col-4 text-center change-btns">
+                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M5 11a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"></path>
+                                                    </svg>
+                                                </button>
+                                                <input type="number" min="1" value="1" max="100" class="cart-input" readonly>
+                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M12 4a1 1 0 0 0-1 1v6H5a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V5a1 1 0 0 0-1-1"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="col-sm-2 col-4 text-center cart-total-price">
+                                                <strong><span class="total-price">1000.00 ₽</span></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 cart-one">
+                                        <div class="row cart-items">
+                                            <div class="col-sm-2 col-5 text-center">
+                                                <a href="product.html"><img src="static/deps/images/goods/пирожные.jpg" class="cart-img"></a>
+                                            </div>
+                                            <div class="col-sm-5 col-7 px-2">
+                                                <div style="margin-bottom: 0.7rem">
+                                                    <a href="product.html" style="text-decoration: none; color: black;">
+                                                        <p class="cart-product-name">Пирожные</p>
+                                                        <span style="font-size: 14px;">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо. </span>
+                                                        <br>
+                                                        <div class="cart-price">
+                                                            <span class="cart-price-price">Цена: </span>
+                                                            <span style="font-size: 15px;">100.00 ₽</span>
+                                                            <!-- <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                            <span style="color: red; font-weight: 600;">100.00 ₽</span> -->
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="cart-options">
+                                                    <a href="#" style="margin-right: 0.6rem;">
+                                                        <div class="cart-delete">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <a href="create-order.html" class="cart-link-buy">Купить</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-center mobile-cart-price">
+                                                <span style="color: black; font-size: 15px; margin-right: 0.2rem">Цена: </span>
+                                                <!-- Без скидки -->
+                                                <br class="mobile-cart-price-br">
+                                                <span style="font-size: 15px;">100.00 ₽</span>
+                                                <!-- <br class="mobile-cart-price-br">
+                                                <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                <br class="mobile-cart-price-br">
+                                                <span style="color: red; font-weight: 600;">99.99 ₽</span> -->
+                                            </div>
+                                            <div class="col-sm-3 col-4 text-center change-btns">
+                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M5 11a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"></path>
+                                                    </svg>
+                                                </button>
+                                                <input type="number" min="1" value="1" max="100" class="cart-input" readonly>
+                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M12 4a1 1 0 0 0-1 1v6H5a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V5a1 1 0 0 0-1-1"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="col-sm-2 col-4 text-center cart-total-price">
+                                                <strong><span class="total-price">1000.00 ₽</span></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 cart-one">
+                                        <div class="row cart-items">
+                                            <div class="col-sm-2 col-5 text-center">
+                                                <a href="product.html"><img src="static/deps/images/goods/tabris-pizza-3.png" class="cart-img"></a>
+                                            </div>
+                                            <div class="col-sm-5 col-7 px-2">
+                                                <div style="margin-bottom: 0.7rem">
+                                                    <a href="product.html" style="text-decoration: none; color: black;">
+                                                        <p class="cart-product-name">Пеперони</p>
+                                                        <span style="font-size: 14px;">Тесто, соус для пиццы, моцарелла, колбаса пеперони, пармезан, орегано.</span>
+                                                        <br>
+                                                        <div class="cart-price">
+                                                            <span class="cart-price-price">Цена: </span>
+                                                            <span style="font-size: 15px;">100.00 ₽</span>
+                                                            <!-- <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                            <span style="color: red; font-weight: 600;">100.00 ₽</span> -->
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="cart-options">
+                                                    <a href="#" style="margin-right: 0.6rem;">
+                                                        <div class="cart-delete">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                    <a href="create-order.html" class="cart-link-buy">Купить</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-center mobile-cart-price">
+                                                <span style="color: black; font-size: 15px; margin-right: 0.2rem">Цена: </span>
+                                                <!-- Без скидки -->
+                                                <br class="mobile-cart-price-br">
+                                                <span style="font-size: 15px;">100.00 ₽</span>
+                                                <!-- <br class="mobile-cart-price-br">
+                                                <span style="font-size: 14px; margin-right: 0.2rem"><s>100.00 ₽</s></span>
+                                                <br class="mobile-cart-price-br">
+                                                <span style="color: red; font-weight: 600;">99.99 ₽</span> -->
+                                            </div>
+                                            <div class="col-sm-3 col-4 text-center change-btns">
+                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M5 11a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z"></path>
+                                                    </svg>
+                                                </button>
+                                                <input type="number" min="1" value="1" max="100" class="cart-input" readonly>
+                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ag022-b1">
+                                                        <path fill="currentColor" d="M12 4a1 1 0 0 0-1 1v6H5a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V5a1 1 0 0 0-1-1"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="col-sm-2 col-4 text-center cart-total-price">
+                                                <strong><span class="total-price">1000.00 ₽</span></strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-lg-4 create-order">
+                        <div class="create-order-container mt-2 pos-cart-sticky">
+                            <h4 class="create-order-text create-order-your-cart">Ваша корзина</h4>
+                            <div class="d-flex justify-content-between create-order-item">
+                                <span class="create-order-text">Товары <span style="color: grey; font-size: 15px">(4)</span></span>
+                                <span class="create-order-text create-order-bold-text">2597.89 ₽</span>
+                            </div>
+                            <div class="d-flex justify-content-between create-order-discount">
+                                <span class="create-order-text">Скидка</span>
+                                <span class="create-order-text create-order-bold-text" style="color: #f91155;">- 97.89 ₽</span>
+                            </div>
+                            <div class="d-flex justify-content-between create-order-item">
+                                <span class="create-order-text">Итого</span>
+                                <span class="create-order-text create-order-bold-text create-order-all-price">2500.00 ₽</span>
+                            </div>
+                            <div class="container-create-order">
+                                <a class="btn btn-dark btn-create-order" href="create-order.html">
+                                    Оформить заказ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="mb-0 mt-4">
+            <div class="container-fluid bg-dark">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 py-2 footer-text text-center">
+                        <a href="info.html">Контакты</a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 py-2 footer-text text-center">
+                        <a href="#">Разработчики</a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 py-2 media-links">
+                        <a href="https://t.me/Pizza_school_project_bot" target="_blank"><img
+                                style="width: 38px; margin-inline: 1em" src="static/deps/favicon/telegram_logo.png"
+                                alt="My Telegram"></a>
+                        <a href="https://vk.com/pelmeny_tv" target="_blank"><img style="width: 38px; margin-inline: 1em"
+                                src="static/deps/favicon/vk logo.png" alt="My VK"></a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 footer-text text-center">
+                        <p class="text-center text-white">&copy; Вкусно и быстро</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="static/deps/js/jquery/jquery-3.7.0.min.js"></script>
+    <script src="static/deps/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

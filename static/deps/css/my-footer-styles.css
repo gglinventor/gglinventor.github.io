@@ -1,0 +1,18 @@
+footer {
+    background-color: rgb(36, 36, 36);
+}
+
+.footer-text {
+    color: rgb(255, 255, 255);
+    margin: auto auto;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);;
+}
+
+.media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

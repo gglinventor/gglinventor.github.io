@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/deps/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="static/deps/css/my-styles.css">
+    <!-- Стиль footer-a для главной страницы -->
+    <link rel="stylesheet" href="static/deps/css/main-styles.css">
+    <link rel="stylesheet" href="static/deps/css/card-styles.css">
+    <link rel="stylesheet" href="static/deps/css/my-footer-styles.css">
+    <!-- Favicons for different platforms -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/deps/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/deps/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/deps/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/deps/favicon/site.webmanifest">
+    <title>Вкусно и быстро | Каталог</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="static/deps/favicon/android-chrome-192x192.png" alt="pizza-logotip"></a>
+                <span class="logotip-span">Вкусно и быстро</span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="info.html">Информация</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="cart.html">Корзина</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="login.html">Войти</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Мой профиль
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item  text-white" href="cart.html">Корзина</a></li>
+                                <li><a class="dropdown-item  text-white" href="#">Личный кабинет</a>
+                                </li>
+                                <li><a class="dropdown-item  text-white" href="#">Админ панель</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item  text-white" href="#">Выйти</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск товара" aria-label="Search">
+                        <button class="btn btn-outline-success text-white" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="div-main">
+        <section>
+            <div class="container-fluid">
+                <div class="row pos-sticky">
+                    <div class="col-xl-1 col-sm-1 col-0">
+                    </div>
+                    <div class="col-xl-9 col-sm-8 col-8">
+                        <div class="mt-2 z-3">
+                            <!-- Каталог -->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle btn-dark catalog-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Каталог</span>
+                                    <!-- width="32" height="32" -->
+                                    <img class="mx-1" src="static/deps/icons/grid-fill.svg" alt="Catalog Icon">
+                                </button>
+                                <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Все товары</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Пицца</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Комбо</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Напитки</a></li>
+                                    <li><a class="catalog-item dropdown-item text-white" href="base.html">Закуски</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-container col-xl-2 col-sm-2 col-4">
+                        <!-- Значек корзины, вызывает модальное окно -->
+                        <div class="mt-2 z-3">
+                            <button type="button" class="btn btn-dark btn-secondary d-flex justify-content-between text-center cart-btn" id="modalButton"
+                                aria-expanded="false">
+                                <!-- width="28" height="28" -->
+                                <img class="mx-1" src="static/deps/icons/basket2-fill.svg" alt="Catalog Icon">
+                                <span id="goods-in-cart-count">15</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Разметка модального окна корзины -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content mt-5">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h3 class="text-center mb-4">Корзина</h3>
+                                <div class="container modal-container" id="cart-items-container">
+                                    <!-- Разметка корзины -->
+                                    <div class="card mb-3 text-bg-light shadow-lg">
+                                        <div class="card-header d-flex justify-content-start text-center product-header">
+                                            <img src="static/deps/images/goods/tabris-pizza.png" alt="Моцарелла" width="40" height="40" style="margin-right: 5px;">
+                                            <span class="modal-card-title product-title">Моцарелла</span>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="row text-center d-flex justify-content-between modal-card-items">
+                                                    <div class="col p-0 card-col">
+                                                        <div class="input-group">
+                                                            <div class="number">
+                                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">-</button>
+                                                                <input type="number" min="1" value="50" readonly>
+                                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col p-0 card-col card-col-price">
+                                                        <span class="modal-card-price">x 1000.00 = </span>
+                                                    </div>
+                                                    <div class="col p-0 card-col">
+                                                        <strong class="modal-card-product-price">10000.00 ₽</strong>
+                                                    </div>
+                                                    <div class="col p-0 card-col card-col-cart">
+                                                        <a href="#" class="remove-from-cart" data-cart-id="">
+                                                            <img class="mx-1" src="static/deps/icons/trash3-fill.svg" alt="Catalog Icon" width="22" height="22">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="card-header d-flex justify-content-start text-center product-header">
+                                            <img src="static/deps/images/goods/Напиток.jpg" alt="Моцарелла" width="40" height="40" style="margin-right: 5px;">
+                                            <span class="modal-card-title product-title">Напиток</span>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="row text-center d-flex justify-content-between modal-card-items">
+                                                    <div class="col p-0 card-col">
+                                                        <div class="input-group">
+                                                            <div class="number">
+                                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">-</button>
+                                                                <input type="number" min="1" value="1" readonly>
+                                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col p-0 card-col card-col-price">
+                                                        <span class="modal-card-price">x 100.00 = </span>
+                                                    </div>
+                                                    <div class="col p-0 card-col">
+                                                        <strong class="modal-card-product-price">1000.00 ₽</strong>
+                                                    </div>
+                                                    <div class="col p-0 card-col card-col-cart">
+                                                        <a href="#" class="remove-from-cart" data-cart-id="">
+                                                            <img class="mx-1" src="static/deps/icons/trash3-fill.svg" alt="Catalog Icon" width="22" height="22">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="card-header d-flex justify-content-start text-center product-header">
+                                            <img src="static/deps/images/goods/пирожные.jpg" alt="Моцарелла" width="40" height="40" style="margin-right: 5px;">
+                                            <span class="modal-card-title product-title">Пирожные</span>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="row text-center d-flex justify-content-between modal-card-items">
+                                                    <div class="col p-0 card-col">
+                                                        <div class="input-group">
+                                                            <div class="number">
+                                                                <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();" data-cart-id=""data-cart-change-url="">-</button>
+                                                                <input type="number" min="1" value="1" readonly>
+                                                                <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();" data-cart-id=""data-cart-change-url="">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col p-0 card-col card-col-price">
+                                                        <span class="modal-card-price">x 100.00 = </span>
+                                                    </div>
+                                                    <div class="col p-0 card-col">
+                                                        <strong class="modal-card-product-price">100.00 ₽</strong>
+                                                    </div>
+                                                    <div class="col p-0 card-col card-col-cart">
+                                                        <a href="#" class="remove-from-cart" data-cart-id="">
+                                                            <img class="mx-1" src="static/deps/icons/trash3-fill.svg" alt="Catalog Icon" width="22" height="22">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card mb-3 shadow-lg">
+                                        <div class="card-footer">
+                                            <p class="float-left">Итого <strong>1</strong> товар(а) на сумму</p>
+                                            <h4 class="float-left"><strong>100.00 ₽</strong></h4>
+                                        </div>
+                                    </div>
+                                    <!-- Закончилась разметка корзины -->
+                                    <div class="container-create-order">
+                                        <a class="btn btn-dark btn-create-order" href="create-order.html">
+                                            Оформить заказ
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Закончилась разметка модального окна -->
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-congratulation">
+                            <span class="entrance-congratulation-span">Добро пожаловать в пиццерию <br class="entrance-congratulation-br" style="display: none;">"Вкусно и быстро"</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-main-info">
+                            <div class="entrance-info">
+                                <span class="entrance-info-span">Наша пиццерия одна из лучших в Ростовской области! <br class="entrance-info-br" style="display: none;">Мы используем высочайшего качества ингридиенты и рады новым клиентам!</span>
+                                <img class="entrance-info-img" src="static/deps/favicon/chef.png" height="100" alt="Повар">
+                            </div>
+                            <div class="entrance-dop-info">
+                                <a href="info.html" class="entrance-dop-info-link">Смотреть больше информации</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-new">
+                            <span class="entrance-new-span">Новинки нашего магазина</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-row mt-2">
+                    <div class="col-xl-1">
+                    </div>
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="d-flex justify-content-center">
+                            <div class="row">
+                                <div class="col-xxl-3 col-lg-4 col-sm-6 mt-4 card-for-main">
+                                    <div class="card product-card rounded custom-shadow h-100">
+                                        <a href="product.html" class="card-link"></a>
+                                        <span class="span-img p-3">
+                                            <img src="static/deps/images/goods/pizza_3.jpg" style="object-fit: cover;"
+                                                class="card-img-top" alt="Pizza">
+                                        </span>
+                                        <div class="card-body">
+                                            <p class="card-title text-center">Моцарелла</p>
+                                            <p class="card-text text-center">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо</p>
+                                            <span class="badge">-25%</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price"><s>358.49 ₽</s></span>
+                                                <span class="p-discount">329.99 ₽</span>
+                                                <!-- <p><strong>100.00 $</strong></p> -->
+                                                <a href="#" class="btn add-to-cart z-2">
+                                                    <img class="mx-1" src="static/deps/icons/cart-plus (2).svg"
+                                                        alt="Catalog Icon" width="40" height="40">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-lg-4 col-sm-6 mt-4 card-for-main">
+                                    <div class="card product-card rounded custom-shadow h-100">
+                                        <a href="product.html" class="card-link"></a>
+                                        <span class="span-img p-3">
+                                            <img src="static/deps/images/goods/пирожные.jpg" style="object-fit: cover;"
+                                                class="card-img-top" alt="Pizza">
+                                        </span>
+                                        <div class="card-body">
+                                            <p class="card-title text-center">Пирожные</p>
+                                            <p class="card-text text-center">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо</p>
+                                            <span class="badge">-25%</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price"><s>358.49 ₽</s></span>
+                                                <span class="p-discount">329.99 ₽</span>
+                                                <!-- <p><strong>100.00 $</strong></p> -->
+                                                <a href="#" class="btn add-to-cart z-2">
+                                                    <img class="mx-1" src="static/deps/icons/cart-plus (2).svg"
+                                                        alt="Catalog Icon" width="40" height="40">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-catalog">
+                            <span class="entrance-catalog-span">Перейти в каталог</span>
+                            <a href="base.html" class="entrance-catalog-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="mb-0 mt-4">
+            <div class="container-fluid bg-dark">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 py-2 footer-text text-center">
+                        <a href="info.html">Контакты</a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 py-2 footer-text text-center">
+                        <a href="#">Разработчики</a>
+                    </div>
+                    <div class="col-lg-4 col-md-12 py-2 media-links">
+                        <a href="https://t.me/Pizza_school_project_bot" target="_blank"><img
+                                style="width: 38px; margin-inline: 1em" src="static/deps/favicon/telegram_logo.png"
+                                alt="My Telegram"></a>
+                        <a href="https://vk.com/pelmeny_tv" target="_blank"><img style="width: 38px; margin-inline: 1em"
+                                src="static/deps/favicon/vk logo.png" alt="My VK"></a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 footer-text text-center">
+                        <p class="text-center text-white">&copy; Вкусно и быстро</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="static/deps/js/jquery/jquery-3.7.0.min.js"></script>
+    <script src="static/deps/js/jquery-ajax.js"></script>
+    <script src="static/deps/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
