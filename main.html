@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/deps/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="static/deps/css/my-styles.css">
-    <link rel="stylesheet" href="static/deps/css/login-styles.css">
     <!-- Стиль footer-a для главной страницы -->
+    <link rel="stylesheet" href="static/deps/css/main-styles.css">
+    <link rel="stylesheet" href="static/deps/css/card-styles.css">
     <link rel="stylesheet" href="static/deps/css/my-footer-styles.css">
     <!-- Favicons for different platforms -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="apple-touch-icon" sizes="180x180" href="static/deps/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/deps/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/deps/favicon/favicon-16x16.png">
     <link rel="manifest" href="static/deps/favicon/site.webmanifest">
-    <title>Вкусно и быстро | Вход в личный кабинет</title>
+    <title>Вкусно и быстро | Каталог</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
                         <li class="nav-item">
                             <a class="nav-link  text-white" href="login.html">Войти</a>
                         </li>
-                        <li class="nav-item dropdown ">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Мой профиль
@@ -60,10 +60,8 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Поиск товара" aria-label="Search">
                         <button class="btn btn-outline-success text-white" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>
                         </button>
                     </form>
@@ -74,8 +72,8 @@
 
     <div class="div-main">
         <section>
-            <div class="container-fluid pos-sticky">
-                <div class="row">
+            <div class="container-fluid">
+                <div class="row pos-sticky">
                     <div class="col-xl-1 col-sm-1 col-0">
                     </div>
                     <div class="col-xl-9 col-sm-8 col-8">
@@ -97,6 +95,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="cart-container col-xl-2 col-sm-2 col-4">
                         <!-- Значек корзины, вызывает модальное окно -->
                         <div class="mt-2 z-3">
@@ -229,32 +228,117 @@
                         </div>
                     </div>
                 </div>
-                <!-- Закончилась разметка модального окна корзины -->
+                <!-- Закончилась разметка модального окна -->
             </div>
-            <div class="first-wrapper">
-                <div class="wrapper">
-                    <form action="">
-                        <h1>Вход в личный кабинет</h1>
-                        <div class="input-box">
-                            <input type="text" placeholder="Имя пользователя" required>
-                            <i class='bx bxs-user'></i>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-congratulation">
+                            <span class="entrance-congratulation-span">Добро пожаловать в пиццерию <br class="entrance-congratulation-br" style="display: none;">"Вкусно и быстро"</span>
                         </div>
-                        <div class="input-box">
-                            <input type="password" id="password" placeholder="Пароль" required>
-                            <i class='bx bxs-lock-alt' id="password-icon"></i>
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-main-info">
+                            <div class="entrance-info">
+                                <span class="entrance-info-span">Наша пиццерия одна из лучших в Ростовской области! <br class="entrance-info-br" style="display: none;">Мы используем высочайшего качества ингридиенты и рады новым клиентам!</span>
+                                <img class="entrance-info-img" src="static/deps/favicon/chef-2.png" height="100" alt="Повар">
+                            </div>
+                            <div class="entrance-dop-info">
+                                <a href="info.html" class="entrance-dop-info-link">Смотреть больше информации</a>
+                            </div>
                         </div>
-                        <div class="forgot">
-                            <a href="#">Забыли пароль?</a>
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-new">
+                            <span class="entrance-new-span">Новинки нашего магазина</span>
                         </div>
-                        <button type="submit" class="login-btn">Войти</button>
-                        <div class="register-link">
-                            <p>Нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
+                    </div>
+                </div>
+                <div class="row card-row mt-2">
+                    <div class="col-xl-1">
+                    </div>
+                    <div class="col-xl-10 col-lg-12">
+                        <div class="d-flex justify-content-center">
+                            <div class="row">
+                                <div class="col-xxl-3 col-lg-4 col-sm-6 mt-4 card-for-main">
+                                    <div class="card product-card rounded custom-shadow h-100">
+                                        <a href="product.html" class="card-link"></a>
+                                        <span class="span-img p-3">
+                                            <img src="static/deps/images/goods/pizza_3.jpg" style="object-fit: cover;"
+                                                class="card-img-top" alt="Pizza">
+                                        </span>
+                                        <div class="card-body">
+                                            <p class="card-title text-center">Моцарелла</p>
+                                            <p class="card-text text-center">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо</p>
+                                            <span class="badge">-25%</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price"><s>358.49 ₽</s></span>
+                                                <span class="p-discount">329.99 ₽</span>
+                                                <!-- <p><strong>100.00 $</strong></p> -->
+                                                <a href="#" class="btn add-to-cart z-2">
+                                                    <img class="mx-1" src="static/deps/icons/cart-plus (2).svg"
+                                                        alt="Catalog Icon" width="40" height="40">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-lg-4 col-sm-6 mt-4 card-for-main">
+                                    <div class="card product-card rounded custom-shadow h-100">
+                                        <a href="product.html" class="card-link"></a>
+                                        <span class="span-img p-3">
+                                            <img src="static/deps/images/goods/пирожные.jpg" style="object-fit: cover;"
+                                                class="card-img-top" alt="Pizza">
+                                        </span>
+                                        <div class="card-body">
+                                            <p class="card-title text-center">Пирожные</p>
+                                            <p class="card-text text-center">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо</p>
+                                            <span class="badge">-25%</span>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="price"><s>358.49 ₽</s></span>
+                                                <span class="p-discount">329.99 ₽</span>
+                                                <!-- <p><strong>100.00 $</strong></p> -->
+                                                <a href="#" class="btn add-to-cart z-2">
+                                                    <img class="mx-1" src="static/deps/icons/cart-plus (2).svg"
+                                                        alt="Catalog Icon" width="40" height="40">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-2 col-md-1 col-0">
+                    </div>
+                    <div class="col-xl-8 col-md-10 col-12">
+                        <div class="entrance-catalog">
+                            <span class="entrance-catalog-span">Перейти в каталог</span>
+                            <a href="base.html" class="entrance-catalog-link"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </section>
-        
+
         <footer class="mb-0 mt-4">
             <div class="container-fluid bg-dark">
                 <div class="row">
@@ -278,8 +362,11 @@
             </div>
         </footer>
     </div>
+
     <script src="static/deps/js/jquery/jquery-3.7.0.min.js"></script>
     <script src="static/deps/js/jquery-ajax.js"></script>
     <script src="static/deps/js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="static/deps/js/login-events.js"></script>
+
 </body>
+
+</html>

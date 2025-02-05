@@ -1,0 +1,29 @@
+.registration-container {
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    padding-top: 1rem;
+    box-shadow: 2px 2px 20px 1px #000000;
+}
+
+.registration-label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .agreement-container {
+        margin-left: 0.2rem !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .registration-container {
+        margin-inline: 1rem;
+    }
+
+    .agreement-text {
+        font-size: 13px;
+    }
+}

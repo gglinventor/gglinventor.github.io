@@ -58,3 +58,14 @@ $(document).ready(function () {
 
 
 });
+
+
+// Попытка удержать фон
+
+// $('#block').fancybox({
+//     helpers: {
+//       overlay: {
+//         locked: false
+//       }
+//     }
+//   });

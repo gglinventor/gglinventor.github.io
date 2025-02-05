@@ -1,0 +1,328 @@
+.profile-container,
+.profile-cart-container,
+.bonus-card-main-container,
+.my-orders {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px 1px #000000;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.profile-profile-text {
+    margin: 1rem;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    line-height: 30px;
+}
+
+.profile-profile-name {
+    margin: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    line-height: 25px;
+}
+
+.profile-profile-username {
+    margin: 0.25rem;
+    color: grey;
+    font-size: 14px;
+}
+
+.profile-phone-container {
+    display: flex;
+    justify-content: left;
+    margin: 0.5rem;
+    margin-inline: 1rem;
+}
+
+.profile-phone-container.col-12 {
+    width: 89%;
+}
+
+.profile-profile-n-phone {
+    margin-bottom: 0.35rem;
+    margin-left: 0.75rem;
+}
+
+.profile-profile-phone {
+    margin-left: 0.4rem;
+    margin-bottom: 0.35rem;
+}
+
+.btn-change-profile {
+    margin-bottom: 1.25rem;
+}
+
+.profile-cart-container {
+    background-color: white;
+    border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.profile-cart-cart {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-cart-cart:hover {
+    text-decoration: underline;
+}
+
+.profile-sm-container {
+    display: none;
+}
+
+.bonus-card-main-container {
+    margin-top: 1.75rem;
+    padding-top: 0.75rem;
+}
+
+.bonus-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.profile-bonus-card {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.bonus-card-img {
+    width: 110px;
+    margin-left: 1rem;
+}
+
+.bonus-card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+}
+
+.bonus-card-info-p {
+    color: black;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.my-orders {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.25rem;
+    padding: 1rem;
+}
+
+.my-orders-p {
+    font-size: 2rem;
+    margin: 0;
+    margin-right: 0.25rem;
+}
+
+.col.accordion {
+    padding-inline: 0;
+}
+
+.profile-one-order {
+    padding-top: 0.5rem;
+    padding-inline: 1rem;
+}
+
+.profile-created-order-head-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.profile-order-items {
+    border-top: 1px solid #ddd;
+    padding-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.profile-created-order-text{
+    margin-bottom: 0;
+}
+
+.profile-order-product-link {
+    text-decoration: underline;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.order-other-info {
+    border-top: 1px solid #000000;
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+    padding-inline: 1rem;
+    margin-bottom: 0;
+}
+
+.order-full-price-container {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-full-price-container>p {
+    margin: 0;
+}
+
+.created-order-other-price-text {
+    line-height: 1.2;
+    margin-inline: 0.25rem;
+}
+
+.created-order-full-price-text {
+    line-height: 1.4;
+    font-weight: bold;
+    margin-inline: 0.25rem;
+}
+
+
+@media (min-width: 1440px) and (max-width: 2560px) {
+    .profile-container, 
+    .bonus-card-main-container,
+    .profile-cart-container {
+        margin-inline: 3rem;
+    }
+    .profile-order-container,
+    .my-orders {
+        margin-inline: 3.75rem;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1521px) {
+    .profile-container, 
+    .bonus-card-main-container,
+    .profile-cart-container {
+        margin-inline: 2rem;
+    }
+
+    .profile-order-container,
+    .my-orders {
+        margin-inline: 2.75rem;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1440px) {
+    .profile-cart-container {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1439px) {
+    .profile-order-container,
+    .my-orders {
+        margin-inline: 0.75rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+    .profile-container,
+    .bonus-card-main-container {
+        margin-right: 0.5rem;
+    }
+
+    .profile-cart-container {
+        margin-left: 0.5rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .profile-sm-container {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .bonus-card-main-container {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .order-full-price-container {
+        margin-bottom: 0.6rem;
+    }
+
+    .created-order-full-price-text,
+    .created-order-other-price-text {
+        margin: 0 !important;
+        font-size: 0.9rem;
+    }
+
+    .order-other-info {
+        margin-bottom: 0.5rem;
+    }
+
+    .order-full-price-container {
+        margin-top: 0.6rem;
+        margin-bottom: 0.4rem;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 400px) {
+    .profile-created-order-head-text,
+    .profile-order-product-link {
+        font-size: 1rem;
+    }
+
+    .profile-created-order-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 376px) {
+    .profile-container, 
+    .bonus-card-main-container,
+    .profile-cart-container {
+        margin-inline: 0.75rem;
+    }
+
+    .profile-order-container,
+    .my-orders {
+        margin-inline: 1.5rem;
+    }
+}
+
+@media (max-width: 399px) and (min-width: 320px) {
+    .profile-created-order-head-text,
+    .profile-order-product-link {
+        font-size: 0.85rem;
+    }
+
+    .profile-created-order-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 375px) and (min-width: 321px) {
+    .profile-container, 
+    .bonus-card-main-container,
+    .profile-cart-container {
+        margin-inline: 0.4rem;
+    }
+
+    .profile-order-container,
+    .my-orders {
+        margin-inline: 1.15rem;
+    }
+}

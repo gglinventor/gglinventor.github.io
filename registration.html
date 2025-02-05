@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/deps/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="static/deps/css/my-styles.css">
-    <link rel="stylesheet" href="static/deps/css/login-styles.css">
     <!-- Стиль footer-a для главной страницы -->
+    <link rel="stylesheet" href="static/deps/css/registration-styles.css">
     <link rel="stylesheet" href="static/deps/css/my-footer-styles.css">
     <!-- Favicons for different platforms -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="apple-touch-icon" sizes="180x180" href="static/deps/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/deps/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/deps/favicon/favicon-16x16.png">
     <link rel="manifest" href="static/deps/favicon/site.webmanifest">
-    <title>Вкусно и быстро | Вход в личный кабинет</title>
+    <title>Вкусно и быстро | Регистрация</title>
 </head>
 
 <body>
@@ -40,7 +39,7 @@
                         <li class="nav-item">
                             <a class="nav-link  text-white" href="login.html">Войти</a>
                         </li>
-                        <li class="nav-item dropdown ">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Мой профиль
@@ -60,10 +59,8 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Поиск товара" aria-label="Search">
                         <button class="btn btn-outline-success text-white" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>
                         </button>
                     </form>
@@ -74,8 +71,8 @@
 
     <div class="div-main">
         <section>
-            <div class="container-fluid pos-sticky">
-                <div class="row">
+            <div class="container-fluid">
+                <div class="row pos-sticky">
                     <div class="col-xl-1 col-sm-1 col-0">
                     </div>
                     <div class="col-xl-9 col-sm-8 col-8">
@@ -97,6 +94,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="cart-container col-xl-2 col-sm-2 col-4">
                         <!-- Значек корзины, вызывает модальное окно -->
                         <div class="mt-2 z-3">
@@ -229,32 +227,76 @@
                         </div>
                     </div>
                 </div>
-                <!-- Закончилась разметка модального окна корзины -->
+                <!-- Закончилась разметка модального окна -->
             </div>
-            <div class="first-wrapper">
-                <div class="wrapper">
-                    <form action="">
-                        <h1>Вход в личный кабинет</h1>
-                        <div class="input-box">
-                            <input type="text" placeholder="Имя пользователя" required>
-                            <i class='bx bxs-user'></i>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-1">
+                    </div>
+                    <div class="col-lg-8 col-sm-10 col-12">
+                        <div class="registration-container">
+                            <form>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <p class="registration-label">Регистрация</p>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="firstName" class="form-label">Имя<span style="color: red;">*</span></label>
+                                        <input type="text" class="form-control" id="firstName"
+                                            placeholder="Введите ваше имя" required>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="lastName" class="form-label">Фамилия<span style="color: red;">*</span></label>
+                                        <input type="text" class="form-control" id="lastName"
+                                            placeholder="Введите вашу фамилию" required>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="username" class="form-label">Имя пользователя<span style="color: red;">*</span></label>
+                                        <input type="text" class="form-control" id="username"
+                                            placeholder="Придумайте имя для аккаунта" required>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="useremail" class="form-label">Почта<span style="color: red;">*</span></label>
+                                        <input type="email" class="form-control" id="useremail"
+                                            placeholder="Введите вашу почту" required>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="userphone" class="form-label">Номер телефона<span style="color: red;">*</span></label>
+                                        <input type="tel" class="form-control tel" id="userphone"
+                                            placeholder="Введите ваш номер телефона" required>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="password1" class="form-label">Пароль<span style="color: red;">*</span></label>
+                                        <input type="password" class="form-control" id="password1"
+                                            placeholder="Придумайте пароль" required>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6 col-12 mb-3">
+                                        <label for="password2" class="form-label">Подтверждение пароля<span style="color: red;">*</span></label>
+                                        <input type="password" class="form-control" id="password2"
+                                            placeholder="Подтвердите пароль" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check agreement-container mx-3">
+                                            <input class="form-check-input" type="checkbox" name="agreement" id="flexCheckDefaultAgreement" value="on" required>
+                                            <label class="form-check-label agreement-text" for="flexCheckDefaultAgreement" style="margin-top: 0.15rem;">
+                                                Я согласен с <a href="static/deps/additional_files/agreement policy.docx" download target="_blank">политикой соглашений</a> пиццерии "Вкусно и быстро"
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="container-create-order mt-3">
+                                        <button type="submit" class="btn btn-dark btn-create-order">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="input-box">
-                            <input type="password" id="password" placeholder="Пароль" required>
-                            <i class='bx bxs-lock-alt' id="password-icon"></i>
-                        </div>
-                        <div class="forgot">
-                            <a href="#">Забыли пароль?</a>
-                        </div>
-                        <button type="submit" class="login-btn">Войти</button>
-                        <div class="register-link">
-                            <p>Нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
+
         </section>
-        
+
         <footer class="mb-0 mt-4">
             <div class="container-fluid bg-dark">
                 <div class="row">
@@ -278,8 +320,11 @@
             </div>
         </footer>
     </div>
+
     <script src="static/deps/js/jquery/jquery-3.7.0.min.js"></script>
     <script src="static/deps/js/jquery-ajax.js"></script>
     <script src="static/deps/js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="static/deps/js/login-events.js"></script>
+    <script src="static/deps/js/registration-events.js"></script>
 </body>
+
+</html>
